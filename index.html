@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>PirelliEcoReports – Archivio Report di Sostenibilità</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <div class="hero-kicker">
+                    <span class="hero-kicker-dot"></span>
+                    PirelliEcoReports · Archivio Sostenibilità
+                </div>
+
+                <div class="brand-row">
+                    <img src="pirelli-logo.png" alt="Logo Pirelli" class="brand-mark">
+                    <h1 class="hero-title" id="hero-title">
+                        <span>PirelliEcoReports</span><br>
+                        Evoluzione della sostenibilità Pirelli 2015–2024
+                    </h1>
+                </div>
+
+                <p class="hero-subtitle">
+                    Interfaccia web dedicata all’analisi dei report annuali di Pirelli.  
+                    La pagina consente di esplorare, filtrare e scaricare i bilanci di sostenibilità
+                    e i report annuali della società, per studiare l’evoluzione delle politiche ESG nel tempo.
+                </p>
+                <div class="hero-meta" aria-label="Metadati progetto">
+                    <span class="chip">
+                        <span class="chip-dot" aria-hidden="true"></span>
+                        Progetto PW – Tecnologia Web per la Sostenibilità d’Impresa
+                    </span>
+                    <span class="chip">
+                        Azienda: Pirelli · Settore: Manifattura &amp; Automotive
+                    </span>
+                </div>
+            </div>
+            <div class="hero-side">
+                <div class="toolbar-badge">
+                    10 report · 2015 – 2024<br>
+                    <span style="font-size:0.7rem;color:var(--text-soft);">
+                        Download diretto PDF · Consultazione offline
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLBAR FILTRI -->
+    <section class="toolbar" aria-label="Filtri di ricerca">
+        <div class="toolbar-group">
+            <label for="search" class="toolbar-label">Cerca nel repository</label>
+            <input id="search" class="toolbar-input" type="search"
+                   placeholder="Cerca per anno, parole chiave ESG, note di bilancio…">
+        </div>
+        <div class="toolbar-group">
+            <label for="period" class="toolbar-label">Periodo</label>
+            <select id="period" class="toolbar-select">
+                <option value="all">Tutti gli anni (2015–2024)</option>
+                <option value="early">2015 – 2017</option>
+                <option value="mid">2018 – 2020</option>
+                <option value="recent">2021 – 2024</option>
+            </select>
+        </div>
+        <div class="toolbar-group" style="flex:0 0 auto; justify-content:flex-end;">
+            <span class="toolbar-badge" id="counter">
+                10 report disponibili
+            </span>
+        </div>
+    </section>
+
+    <!-- GRID REPORT -->
+    <section aria-label="Report Pirelli">
+        <div class="reports-grid" id="reportsGrid">
+
+            <!-- 2015 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2015"
+                     data-period="early"
+                     data-year="2015"
+                     data-keywords="2015 bilancio annuale sostenibilita governance avvio percorso esg">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2015 – Bilancio e Sostenibilità</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2015</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Report che documenta la strategia industriale e i primi passi strutturati
+                    di Pirelli sui temi ambientali, sociali e di governance (ESG).
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Struttura di governance</span>
+                    <span class="metric-pill">Gestione rischi</span>
+                    <span class="metric-pill">Primi indicatori ESG</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="2425_AnnualReport_2015_ita.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2015
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Punto di partenza per l’analisi storica di PirelliEcoReports.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2016 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2016"
+                     data-period="early"
+                     data-year="2016"
+                     data-keywords="2016 annual report 2016 sostenibilita consolidamento">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2016 – Bilancio Integrato</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2016</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Report di transizione con ulteriore integrazione tra risultati economici
+                    e performance ambientali e sociali.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Integrazione bilancio–sostenibilità</span>
+                    <span class="metric-pill">Stakeholder engagement</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="3217_ITA_Pirelli_AnnualReport_10_FINAL_10-08.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2016
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Utile per confrontare i primi anni di reporting integrato.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2017 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2017"
+                     data-period="early"
+                     data-year="2017"
+                     data-keywords="2017 annual report sostenibilita consolidamento strategie industriali">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2017</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2017</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Descrive il consolidamento del modello di business focalizzato su pneumatici
+                    ad alto valore e sull’innovazione tecnologica.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Pneumatici High Value</span>
+                    <span class="metric-pill">Innovazione prodotti</span>
+                    <span class="metric-pill">Responsabilità di filiera</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="3269_PIRELLI_ANNUAL_REPORT_2017_ITA.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2017
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Riferimento per l’evoluzione del portafoglio sostenibile.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2018 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2018"
+                     data-period="mid"
+                     data-year="2018"
+                     data-keywords="2018 annual report 2018 sostenibilita digitalizzazione mobilita">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2018</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2018</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Introduce con maggiore evidenza il ruolo della digitalizzazione e dei
+                    servizi connessi alla mobilità sostenibile.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Digitalizzazione</span>
+                    <span class="metric-pill">Servizi per la mobilità</span>
+                    <span class="metric-pill">Performance ESG</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="5342_Pirelli_Annual_Report_2018_IT.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2018
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Anno chiave per l’integrazione tra prodotto e servizio.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2019 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2019"
+                     data-period="mid"
+                     data-year="2019"
+                     data-keywords="2019 climate change cambiamento climatico economia circolare">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2019</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2019</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Approfondisce i temi del cambiamento climatico, dell’economia circolare
+                    e del rapporto con gli stakeholder.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Climate strategy</span>
+                    <span class="metric-pill">Economia circolare</span>
+                    <span class="metric-pill">Stakeholder engagement</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="PIRELLI_ANNUAL_REPORT_2019_ITA.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2019
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Utile per confrontare pre e post-pandemia.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2020 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2020"
+                     data-period="mid"
+                     data-year="2020"
+                     data-keywords="2020 covid pandemia resilienza catena di fornitura">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2020 (interattivo)</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2020</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Report interattivo che racconta la gestione della crisi COVID-19
+                    e le misure di resilienza adottate da Pirelli.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Gestione emergenza</span>
+                    <span class="metric-pill">Salute e sicurezza</span>
+                    <span class="metric-pill">Resilienza della supply chain</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="PIRELLI_ANNUAL_REPORT_2020_ITA_INTERATTIVO.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2020
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Esempio di reporting digitale in contesto di crisi.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2021 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2021"
+                     data-period="recent"
+                     data-year="2021"
+                     data-keywords="2021 ripartenza transizione energetica innovazione">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2021</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2021</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Anno di ripartenza, con attenzione alla transizione energetica,
+                    all’innovazione di prodotto e alla mobilità elettrica.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Transizione energetica</span>
+                    <span class="metric-pill">Mobilità elettrica</span>
+                    <span class="metric-pill">Innovazione R&amp;S</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="AR21_ITA_MONTATO_INTERATTIVO_0509_72dpi.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2021
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Ponte tra fase emergenziale e nuova normalità.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2022 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2022"
+                     data-period="recent"
+                     data-year="2022"
+                     data-keywords="2022 net zero obiettivi climatici innovazione di processo">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2022</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2022</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Il report completa il percorso di integrazione degli obiettivi climatici
+                    di lungo periodo con la strategia industriale.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Obiettivi Net Zero</span>
+                    <span class="metric-pill">Efficienza energetica</span>
+                    <span class="metric-pill">Innovazione di processo</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="AR22_ITA_COMPLETO_INTERATTIVO.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2022
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Riferimento per la strategia clima–industria di Pirelli.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2023 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2023"
+                     data-period="recent"
+                     data-year="2023"
+                     data-keywords="2023 sostenibilita avanzata supply chain trasparenza">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2023</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2023</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Approfondisce la trasparenza di filiera, la gestione delle materie prime
+                    e la misurazione degli impatti lungo il ciclo di vita del prodotto.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Supply chain responsabile</span>
+                    <span class="metric-pill">LCA prodotti</span>
+                    <span class="metric-pill">Trasparenza dati ESG</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="PIRELLI_ANNUAL_REPORT_2023_ITA.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2023
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Base per il confronto con gli obiettivi 2024.
+                    </span>
+                </div>
+            </article>
+
+            <!-- 2024 -->
+            <article class="report-card"
+                     data-name="pirelli annual report 2024"
+                     data-period="recent"
+                     data-year="2024"
+                     data-keywords="2024 sostenibilita avanzata innovazione mobilita elettrica obiettivi 2030">
+                <div class="report-header">
+                    <div class="logo-pill" aria-hidden="true">
+                        <img src="pirelli-logo.png" alt="">
+                    </div>
+                    <div class="card-title-block">
+                        <h2 class="company-name">Pirelli</h2>
+                        <p class="company-report">Annual Report 2024</p>
+                        <div class="badge-row">
+                            <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
+                            <span class="badge badge--year">Anno: 2024</span>
+                            <span class="badge badge--country">Paese: Italia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-description">
+                    Sintetizza lo stato più recente degli obiettivi ESG, l’evoluzione
+                    della mobilità sostenibile e le traiettorie verso il 2030.
+                </p>
+                <div class="pill-metrics">
+                    <span class="metric-pill">Target 2030</span>
+                    <span class="metric-pill">Mobilità sostenibile</span>
+                    <span class="metric-pill">Innovazione continua</span>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-row">
+                        <a class="btn btn-primary"
+                           href="PIRELLI_ANNUAL_REPORT_2024_ITA.pdf"
+                           target="_blank">
+                            <span class="btn-icon">📄</span>
+                            Scarica PDF 2024
+                        </a>
+                    </div>
+                    <span class="card-tagline">
+                        Report di riferimento per la fotografia più aggiornata di Pirelli.
+                    </span>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            <strong>Nessun report trovato.</strong>
+            <br>
+            Prova a modificare il testo di ricerca o a selezionare un altro periodo.
+        </div>
+    </section>
+</main>
+
+<script>
+    (function () {
+        const searchInput = document.getElementById('search');
+        const periodSelect = document.getElementById('period');
+        const grid = document.getElementById('reportsGrid');
+        const cards = Array.from(grid.querySelectorAll('.report-card'));
+        const counter = document.getElementById('counter');
+        const noResults = document.getElementById('noResults');
+
+        function normalizza(str) {
+            return (str || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function applicaFiltri() {
+            const query = normalizza(searchInput.value);
+            const periodo = periodSelect.value;
+
+            let visibili = 0;
+
+            cards.forEach(card => {
+                const cardPeriodo = card.dataset.period;
+                const searchable = normalizza(
+                    card.dataset.name + ' ' +
+                    card.dataset.year + ' ' +
+                    card.dataset.keywords + ' ' +
+                    card.textContent
+                );
+
+                const matchPeriodo = (periodo === 'all' || periodo === cardPeriodo);
+                const matchTesto = !query || searchable.includes(query);
+
+                const mostra = matchPeriodo && matchTesto;
+
+                card.style.display = mostra ? '' : 'none';
+                if (mostra) visibili++;
+            });
+
+            counter.textContent = visibili + (visibili === 1 ? ' report trovato' : ' report disponibili');
+            noResults.style.display = visibili === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('input', applicaFiltri);
+        periodSelect.addEventListener('change', applicaFiltri);
+    })();
+</script>
+</body>
+</html>
