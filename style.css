@@ -1,3 +1,8 @@
+/* 
+   VARIABILI GLOBALI (TEMA)
+   - Palette colori, raggi, ombre, transizioni
+   - Usate in tutto il layout per coerenza visiva
+*/
 :root {
     --bg: #0f172a;
     --bg-soft: #111827;
@@ -16,11 +21,20 @@
     --shadow-chip: 0 0 0 1px rgba(148, 163, 184, 0.35);
     --transition-fast: 180ms ease-out;
 }
+
+/* Reset di base: togli margini e padding predefiniti */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* 
+   STILE GENERALE DELLA PAGINA
+   - Font di sistema
+   - Sfondo scuro con gradiente
+   - Colore testo chiaro
+*/
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
     background: radial-gradient(circle at top, #1f2937, #020617 60%);
@@ -28,16 +42,31 @@ body {
     min-height: 100vh;
     line-height: 1.6;
 }
+
+/* I link ereditano il colore del testo e non hanno sottolineatura */
 a {
     color: inherit;
     text-decoration: none;
 }
+
+/* 
+   CONTENITORE PRINCIPALE
+   - Larghezza massima e centratura
+   - Padding interno per respirare
+*/
 main {
     max-width: 1120px;
     margin: 0 auto;
     padding: 1.5rem 1.25rem 3rem;
 }
-/* ---------- HERO ---------- */
+
+/* ---------- HERO (TESTATA) ---------- */
+
+/* 
+   Box hero principale
+   - Gradiente di sfondo
+   - Bordi arrotondati e ombra
+*/
 .hero {
     background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 55%),
                 radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
@@ -50,6 +79,8 @@ main {
     position: relative;
     overflow: hidden;
 }
+
+/* Effetto luce sopra il blocco hero */
 .hero::after {
     content: "";
     position: absolute;
@@ -58,12 +89,19 @@ main {
     opacity: 0.7;
     pointer-events: none;
 }
+
+/* Layout interno del hero: flex per gestire testo + lato destro */
 .hero-inner {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
+
+/* 
+   Etichetta piccola sopra il titolo (“kicker”)
+   - Aspetto a pillola
+*/
 .hero-kicker {
     display: inline-flex;
     align-items: center;
@@ -79,6 +117,8 @@ main {
     color: var(--text-soft);
     width: fit-content;
 }
+
+/* Puntino verde animico accanto alla scritta "PirelliEcoReports" */
 .hero-kicker-dot {
     width: 10px;
     height: 10px;
@@ -86,6 +126,11 @@ main {
     background: radial-gradient(circle, var(--accent) 0, #15803d 50%, #22c55e 100%);
     box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
 }
+
+/* 
+   Riga con logo + titolo
+   - Flex per allinearli su una stessa riga
+*/
 .brand-row {
     display: flex;
     align-items: flex-end;
@@ -93,7 +138,11 @@ main {
     flex-wrap: wrap;
     margin-top: -10.2rem;
 }
-/* LOGO HERO PIÙ GRANDE */
+
+/* 
+   Logo Pirelli nel hero
+   - Più grande e “sovrapposto” con margini negativi
+*/
 .brand-mark {
     height: 215px;
     width: auto;
@@ -101,22 +150,30 @@ main {
     margin-top: 96px;
     margin-bottom: -86px;
 }
+
+/* Titolo principale del progetto */
 .hero-title {
     font-size: clamp(1.7rem, 3vw, 2.1rem);
     font-weight: 650;
     letter-spacing: 0.01em;
 }
+
+/* Parte del titolo con gradiente verde */
 .hero-title span {
     background: linear-gradient(120deg, var(--accent-strong), #4ade80);
     -webkit-background-clip: text;
     color: transparent;
 }
+
+/* Testo descrittivo sotto il titolo */
 .hero-subtitle {
     font-size: 0.95rem;
     color: var(--text-soft);
     max-width: 640px;
     margin-top: 0.35rem;
 }
+
+/* Riga dei “chip” con info progetto/azienda */
 .hero-meta {
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +181,8 @@ main {
     margin-top: 0.75rem;
     font-size: 0.78rem;
 }
+
+/* Singolo chip informativo (pillola) */
 .chip {
     display: inline-flex;
     align-items: center;
@@ -134,13 +193,18 @@ main {
     background: rgba(15, 23, 42, 0.9);
     color: var(--text-soft);
 }
+
+/* Puntino colorato all’interno del chip */
 .chip-dot {
     width: 7px;
     height: 7px;
     border-radius: 999px;
     background-color: var(--accent-strong);
 }
-/* ---------- FILTER BAR ---------- */
+
+/* ---------- FILTER BAR (BARRA FILTRI) ---------- */
+
+/* Contenitore della toolbar dei filtri (search + select + badge conteggio) */
 .toolbar {
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +215,8 @@ main {
     padding: 0.85rem 0.9rem;
     border: 1px solid var(--border-subtle);
 }
+
+/* Gruppo singolo dentro la toolbar (etichetta + input) */
 .toolbar-group {
     display: flex;
     align-items: center;
@@ -158,6 +224,8 @@ main {
     flex: 1;
     min-width: 210px;
 }
+
+/* Etichette della toolbar (Cerca, Periodo, ecc.) */
 .toolbar-label {
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -165,6 +233,11 @@ main {
     color: var(--text-soft);
     white-space: nowrap;
 }
+
+/* 
+   Campo di ricerca e select
+   - Stessa estetica: pillola scura con bordo
+*/
 .toolbar-input,
 .toolbar-select {
     flex: 1;
@@ -177,6 +250,8 @@ main {
     outline: none;
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
 }
+
+/* Effetto focus sui campi (highlight verde + lieve movimento) */
 .toolbar-input:focus,
 .toolbar-select:focus {
     border-color: var(--accent);
@@ -184,6 +259,8 @@ main {
     background-color: #020617;
     transform: translateY(-1px);
 }
+
+/* Badge a destra che mostra numero dei report disponibili */
 .toolbar-badge {
     font-size: 0.78rem;
     padding: 0.35rem 0.75rem;
@@ -193,12 +270,24 @@ main {
     color: var(--text-soft);
     white-space: nowrap;
 }
-/* ---------- GRID & CARDS ---------- */
+
+/* ---------- GRID & CARDS (LISTA REPORT) ---------- */
+
+/* 
+   Griglia responsiva delle card dei report
+   - Adatta colonne in base allo spazio disponibile
+*/
 .reports-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.1rem;
 }
+
+/* 
+   Singola card di un report
+   - Sfondo scuro con gradiente
+   - Bordi arrotondati, ombra, transizioni hover
+*/
 .report-card {
     background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.7), #020617);
     border-radius: var(--radius-xl);
@@ -212,6 +301,8 @@ main {
     gap: 0.6rem;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
+
+/* Layer decorativo che appare in hover sopra la card */
 .report-card::before {
     content: "";
     position: absolute;
@@ -221,21 +312,29 @@ main {
     transition: opacity 220ms ease-out;
     pointer-events: none;
 }
+
+/* Effetto hover della card: sollevamento + bordo verde */
 .report-card:hover {
     transform: translateY(-3px) translateZ(0);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
     border-color: rgba(74, 222, 128, 0.75);
     background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.18), #020617 55%);
 }
+
+/* Attiva il glow verde in hover */
 .report-card:hover::before {
     opacity: 1;
 }
+
+/* Header della card (logo tondo + testi) */
 .report-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 0.4rem;
 }
+
+/* Contenitore nero tondo per il logo "round.png" */
 .logo-pill {
     height: 30px;
     min-width: 30px;
@@ -248,30 +347,43 @@ main {
     padding: 3px 8px;
     box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.85);
 }
+
+/* Immagine interna nel logo-pill */
 .logo-pill img {
-    width: -webkit-fill-available;
+    /*width: -webkit-fill-available;*/
+    width: auto;
     height: -webkit-fill-available;
     object-fit: cover;
 }
+
+/* Blocco con nome azienda + titolo report + badge */
 .card-title-block {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
 }
+
+/* Nome azienda (Pirelli) */
 .company-name {
     font-size: 0.98rem;
     font-weight: 600;
 }
+
+/* Sottotitolo del report (Annual Report xxxx) */
 .company-report {
     font-size: 0.8rem;
     color: var(--text-soft);
 }
+
+/* Riga di badge (settore, anno, paese) */
 .badge-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
     margin-top: 0.2rem;
 }
+
+/* Stile base dei badge */
 .badge {
     padding: 0.15rem 0.55rem;
     border-radius: var(--radius-pill);
@@ -280,23 +392,33 @@ main {
     color: var(--text-soft);
     background: rgba(15, 23, 42, 0.9);
 }
+
+/* Badge settore: evidenziato in verde */
 .badge--sector {
     border-color: rgba(34, 197, 94, 0.7);
     color: var(--accent-strong);
     background: var(--accent-soft);
 }
+
+/* Badge anno: con accento blu */
 .badge--year {
     border-color: rgba(59, 130, 246, 0.7);
     background: rgba(37, 99, 235, 0.16);
 }
+
+/* Badge paese: bordo tratteggiato per distinguerlo */
 .badge--country {
     border-style: dashed;
 }
+
+/* Testo descrittivo della card */
 .card-description {
     font-size: 0.82rem;
     color: var(--text-soft);
     margin-top: 0.2rem;
 }
+
+/* Contenitore delle “pillole” tematiche */
 .pill-metrics {
     display: flex;
     flex-wrap: wrap;
@@ -304,6 +426,8 @@ main {
     margin-top: 0.1rem;
     font-size: 0.73rem;
 }
+
+/* Singola pillola con tema (es. Climate strategy, Net Zero…) */
 .metric-pill {
     padding: 0.25rem 0.55rem;
     border-radius: var(--radius-pill);
@@ -311,6 +435,8 @@ main {
     border: 1px solid rgba(55, 65, 81, 0.9);
     color: var(--text-soft);
 }
+
+/* Footer della card: pulsante + tagline */
 .card-footer {
     display: flex;
     align-items: center;
@@ -318,11 +444,15 @@ main {
     gap: 0.75rem;
     margin-top: 0.8rem;
 }
+
+/* Riga che contiene uno o più pulsanti */
 .button-row {
     display: flex;
     align-items: center;
     gap: 0.4rem;
 }
+
+/* Stile base di tutti i bottoni */
 .btn {
     border: none;
     outline: none;
@@ -337,15 +467,21 @@ main {
     transition: transform 140ms ease-out, box-shadow 140ms ease-out, background-color 140ms ease-out, border-color 140ms ease-out;
     white-space: nowrap;
 }
+
+/* Bottone principale verde (download PDF) */
 .btn-primary {
     background: linear-gradient(115deg, var(--accent), #22c55e);
     color: #022c22;
     box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
 }
+
+/* Effetto hover sul bottone primario */
 .btn-primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 18px 40px rgba(34, 197, 94, 0.55);
 }
+
+/* Variante di bottone outline (se servisse) */
 .btn-outline {
     background: transparent;
     color: var(--text-soft);
@@ -356,17 +492,27 @@ main {
     background: rgba(15, 23, 42, 0.9);
     transform: translateY(-1px);
 }
+
+/* Icona all’interno del bottone (es. emoji PDF) */
 .btn-icon {
     font-size: 1rem;
     line-height: 0;
 }
+
+/* Piccola tagline finale della card (frase di contesto) */
 .card-tagline {
     font-size: 0.72rem;
     color: var(--text-soft);
     opacity: 0.9;
     display: none;
 }
-/* ---------- RESPONSIVE ---------- */
+
+/* ---------- RESPONSIVE (ADATTAMENTO SCHERMI) ---------- */
+
+/* 
+   Da 720px in su:
+   - Hero in layout orizzontale (testo a sinistra, box a destra)
+*/
 @media (min-width: 720px) {
     .hero-inner {
         flex-direction: row;
@@ -380,6 +526,12 @@ main {
         text-align: right;
     }
 }
+
+/* 
+   Sotto i 640px:
+   - Riduzione padding
+   - Footer delle card impilato verticalmente
+*/
 @media (max-width: 640px) {
     main {
         padding-inline: 1rem;
@@ -395,7 +547,10 @@ main {
         align-items: flex-start;
     }
 }
-/* ---------- NO RESULTS ---------- */
+
+/* ---------- NO RESULTS (MESSAGGIO NESSUN RISULTATO) ---------- */
+
+/* Box che compare quando i filtri non trovano report */
 .no-results {
     margin-top: 1.5rem;
     padding: 1rem 1.1rem;
@@ -405,6 +560,8 @@ main {
     font-size: 0.85rem;
     display: none;
 }
+
+/* Evidenzia la parte in grassetto del messaggio */
 .no-results strong {
     color: var(--accent-strong);
 }
