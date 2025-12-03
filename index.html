@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!--
+        HEAD DELLA PAGINA
+        - Impostazioni di base del documento (charset, titolo, viewport)
+        - Collegamento alla favicon e al file CSS esterno
+    -->
     <meta charset="UTF-8">
     <title>PirelliEcoReports – Archivio Report di Sostenibilità</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-    <!-- HERO -->
+    <!--
+        SEZIONE HERO
+        - Intestazione principale della pagina
+        - Spiega cos’è PirelliEcoReports e il suo obiettivo
+    -->
     <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
             <div class="hero-copy">
+                <!-- Kicker: piccola etichetta sopra al titolo -->
                 <div class="hero-kicker">
                     <span class="hero-kicker-dot"></span>
                     PirelliEcoReports · Archivio Sostenibilità
                 </div>
 
+                <!--
+                    BRAND ROW
+                    - Logo Pirelli a sinistra
+                    - Titolo del progetto a destra
+                -->
                 <div class="brand-row">
                     <img src="pirelli-logo.png" alt="Logo Pirelli" class="brand-mark">
                     <h1 class="hero-title" id="hero-title">
@@ -27,11 +41,22 @@
                     </h1>
                 </div>
 
+                <!--
+                    Sottotitolo: descrive lo scopo dell’interfaccia
+                    - Analisi dei report
+                    - Esplorare, filtrare e scaricare i PDF
+                -->
                 <p class="hero-subtitle">
                     Interfaccia web dedicata all’analisi dei report annuali di Pirelli.  
                     La pagina consente di esplorare, filtrare e scaricare i bilanci di sostenibilità
                     e i report annuali della società, per studiare l’evoluzione delle politiche ESG nel tempo.
                 </p>
+
+                <!--
+                    Metadati del progetto sotto forma di "chip"
+                    - Info sul progetto (corso/tecnologia)
+                    - Info sull’azienda e settore
+                -->
                 <div class="hero-meta" aria-label="Metadati progetto">
                     <span class="chip">
                         <span class="chip-dot" aria-hidden="true"></span>
@@ -42,6 +67,12 @@
                     </span>
                 </div>
             </div>
+
+            <!--
+                HERO SIDE
+                - Box laterale che riassume velocemente il contenuto dell’archivio
+                - Numero di report e periodo coperto
+            -->
             <div class="hero-side">
                 <div class="toolbar-badge">
                     10 report · 2015 – 2024<br>
@@ -53,13 +84,23 @@
         </div>
     </section>
 
-    <!-- TOOLBAR FILTRI -->
+    <!--
+        TOOLBAR FILTRI
+        - Barra di controllo per cercare e filtrare i report
+        - Contiene:
+            • Campo di ricerca testuale
+            • Select per periodo
+            • Contatore dei report visibili
+    -->
     <section class="toolbar" aria-label="Filtri di ricerca">
+        <!-- Gruppo: campo di ricerca -->
         <div class="toolbar-group">
             <label for="search" class="toolbar-label">Cerca nel repository</label>
             <input id="search" class="toolbar-input" type="search"
                    placeholder="Cerca per anno, parole chiave ESG, note di bilancio…">
         </div>
+
+        <!-- Gruppo: select per periodo -->
         <div class="toolbar-group">
             <label for="period" class="toolbar-label">Periodo</label>
             <select id="period" class="toolbar-select">
@@ -69,6 +110,8 @@
                 <option value="recent">2021 – 2024</option>
             </select>
         </div>
+
+        <!-- Gruppo: contatore dei report correntemente visibili -->
         <div class="toolbar-group" style="flex:0 0 auto; justify-content:flex-end;">
             <span class="toolbar-badge" id="counter">
                 10 report disponibili
@@ -76,23 +119,36 @@
         </div>
     </section>
 
-    <!-- GRID REPORT -->
+    <!--
+        GRID DEI REPORT
+        - Sezione che contiene tutte le card, una per ogni annual report
+        - Ogni <article> rappresenta un singolo report con metadati e link al PDF
+    -->
     <section aria-label="Report Pirelli">
         <div class="reports-grid" id="reportsGrid">
 
-            <!-- 2015 -->
+            <!--
+                CARD REPORT 2015
+                - data-* usati per i filtri (periodo, anno, parole chiave)
+                - Contiene titolo, descrizione, temi chiave e pulsante di download PDF
+            -->
             <article class="report-card"
                      data-name="pirelli annual report 2015"
                      data-period="early"
                      data-year="2015"
                      data-keywords="2015 bilancio annuale sostenibilita governance avvio percorso esg">
                 <div class="report-header">
+                    <!-- Logo tondo decorativo -->
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
+
+                    <!-- Blocco titolo della card -->
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
                         <p class="company-report">Annual Report 2015 – Bilancio e Sostenibilità</p>
+
+                        <!-- Badge con informazioni rapide: settore, anno, paese -->
                         <div class="badge-row">
                             <span class="badge badge--sector">Settore: Manifattura &amp; Automotive</span>
                             <span class="badge badge--year">Anno: 2015</span>
@@ -101,20 +157,24 @@
                     </div>
                 </div>
 
+                <!-- Breve descrizione del contenuto del report -->
                 <p class="card-description">
                     Report che documenta la strategia industriale e i primi passi strutturati
                     di Pirelli sui temi ambientali, sociali e di governance (ESG).
                 </p>
+
+                <!-- Pillole tematiche per evidenziare i contenuti chiave -->
                 <div class="pill-metrics">
                     <span class="metric-pill">Struttura di governance</span>
                     <span class="metric-pill">Gestione rischi</span>
                     <span class="metric-pill">Primi indicatori ESG</span>
                 </div>
 
+                <!-- Footer della card: pulsante download + tagline -->
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="2425_AnnualReport_2015_ita.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/2425_AnnualReport_2015_ita.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2015
@@ -126,7 +186,11 @@
                 </div>
             </article>
 
-            <!-- 2016 -->
+            <!--
+                CARD REPORT 2016
+                - Struttura simile alla precedente
+                - Cambiano anno, descrizione, parole chiave e link PDF
+            -->
             <article class="report-card"
                      data-name="pirelli annual report 2016"
                      data-period="early"
@@ -134,7 +198,7 @@
                      data-keywords="2016 annual report 2016 sostenibilita consolidamento">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -159,7 +223,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="3217_ITA_Pirelli_AnnualReport_10_FINAL_10-08.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/3217_ITA_Pirelli_AnnualReport_10_FINAL_10-08.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2016
@@ -171,7 +235,10 @@
                 </div>
             </article>
 
-            <!-- 2017 -->
+            <!--
+                CARD REPORT 2017
+                - Stessa struttura: header, descrizione, pillole, pulsante PDF
+            -->
             <article class="report-card"
                      data-name="pirelli annual report 2017"
                      data-period="early"
@@ -179,7 +246,7 @@
                      data-keywords="2017 annual report sostenibilita consolidamento strategie industriali">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -205,7 +272,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="3269_PIRELLI_ANNUAL_REPORT_2017_ITA.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/3269_PIRELLI_ANNUAL_REPORT_2017_ITA.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2017
@@ -217,7 +284,7 @@
                 </div>
             </article>
 
-            <!-- 2018 -->
+            <!-- CARD REPORT 2018 -->
             <article class="report-card"
                      data-name="pirelli annual report 2018"
                      data-period="mid"
@@ -225,7 +292,7 @@
                      data-keywords="2018 annual report 2018 sostenibilita digitalizzazione mobilita">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -251,7 +318,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="5342_Pirelli_Annual_Report_2018_IT.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/5342_Pirelli_Annual_Report_2018_IT.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2018
@@ -263,7 +330,7 @@
                 </div>
             </article>
 
-            <!-- 2019 -->
+            <!-- CARD REPORT 2019 -->
             <article class="report-card"
                      data-name="pirelli annual report 2019"
                      data-period="mid"
@@ -271,7 +338,7 @@
                      data-keywords="2019 climate change cambiamento climatico economia circolare">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -297,7 +364,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="PIRELLI_ANNUAL_REPORT_2019_ITA.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/PIRELLI_ANNUAL_REPORT_2019_ITA.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2019
@@ -309,7 +376,7 @@
                 </div>
             </article>
 
-            <!-- 2020 -->
+            <!-- CARD REPORT 2020 -->
             <article class="report-card"
                      data-name="pirelli annual report 2020"
                      data-period="mid"
@@ -317,7 +384,7 @@
                      data-keywords="2020 covid pandemia resilienza catena di fornitura">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -343,7 +410,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="PIRELLI_ANNUAL_REPORT_2020_ITA_INTERATTIVO.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/PIRELLI_ANNUAL_REPORT_2020_ITA_INTERATTIVO.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2020
@@ -355,7 +422,7 @@
                 </div>
             </article>
 
-            <!-- 2021 -->
+            <!-- CARD REPORT 2021 -->
             <article class="report-card"
                      data-name="pirelli annual report 2021"
                      data-period="recent"
@@ -363,7 +430,7 @@
                      data-keywords="2021 ripartenza transizione energetica innovazione">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -389,7 +456,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="AR21_ITA_MONTATO_INTERATTIVO_0509_72dpi.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/AR21_ITA_MONTATO_INTERATTIVO_0509_72dpi.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2021
@@ -401,7 +468,7 @@
                 </div>
             </article>
 
-            <!-- 2022 -->
+            <!-- CARD REPORT 2022 -->
             <article class="report-card"
                      data-name="pirelli annual report 2022"
                      data-period="recent"
@@ -409,7 +476,7 @@
                      data-keywords="2022 net zero obiettivi climatici innovazione di processo">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -435,7 +502,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="AR22_ITA_COMPLETO_INTERATTIVO.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/AR22_ITA_COMPLETO_INTERATTIVO.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2022
@@ -447,7 +514,7 @@
                 </div>
             </article>
 
-            <!-- 2023 -->
+            <!-- CARD REPORT 2023 -->
             <article class="report-card"
                      data-name="pirelli annual report 2023"
                      data-period="recent"
@@ -455,7 +522,7 @@
                      data-keywords="2023 sostenibilita avanzata supply chain trasparenza">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -481,7 +548,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="PIRELLI_ANNUAL_REPORT_2023_ITA.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/PIRELLI_ANNUAL_REPORT_2023_ITA.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2023
@@ -493,7 +560,7 @@
                 </div>
             </article>
 
-            <!-- 2024 -->
+            <!-- CARD REPORT 2024 -->
             <article class="report-card"
                      data-name="pirelli annual report 2024"
                      data-period="recent"
@@ -501,7 +568,7 @@
                      data-keywords="2024 sostenibilita avanzata innovazione mobilita elettrica obiettivi 2030">
                 <div class="report-header">
                     <div class="logo-pill" aria-hidden="true">
-                        <img src="pirelli-logo.png" alt="">
+                        <img src="round.png" alt="">
                     </div>
                     <div class="card-title-block">
                         <h2 class="company-name">Pirelli</h2>
@@ -527,7 +594,7 @@
                 <div class="card-footer">
                     <div class="button-row">
                         <a class="btn btn-primary"
-                           href="PIRELLI_ANNUAL_REPORT_2024_ITA.pdf"
+                           href="https://corp-assets.pirelli.com/corporate/PIRELLI_ANNUAL_REPORT_2024_ITA.pdf"
                            target="_blank">
                             <span class="btn-icon">📄</span>
                             Scarica PDF 2024
@@ -541,6 +608,9 @@
 
         </div>
 
+        <!--
+            Messaggio che appare se nessun report corrisponde ai filtri
+        -->
         <div class="no-results" id="noResults">
             <strong>Nessun report trovato.</strong>
             <br>
@@ -549,8 +619,14 @@
     </section>
 </main>
 
+<!--
+    SCRIPT DI FILTRO
+    - Gestisce la ricerca testuale e il filtro per periodo
+    - Aggiorna il numero di report visibili e mostra/nasconde il messaggio "nessun risultato"
+-->
 <script>
     (function () {
+        // Riferimenti agli elementi HTML
         const searchInput = document.getElementById('search');
         const periodSelect = document.getElementById('period');
         const grid = document.getElementById('reportsGrid');
@@ -558,18 +634,23 @@
         const counter = document.getElementById('counter');
         const noResults = document.getElementById('noResults');
 
+        // Funzione per normalizzare il testo:
+        // - lo porta in minuscolo
+        // - rimuove gli accenti (utile per la ricerca)
         function normalizza(str) {
             return (str || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
         }
 
+        // Funzione principale che applica i filtri
         function applicaFiltri() {
-            const query = normalizza(searchInput.value);
-            const periodo = periodSelect.value;
+            const query = normalizza(searchInput.value); // testo inserito nella ricerca
+            const periodo = periodSelect.value;          // valore selezionato nel menu "Periodo"
 
-            let visibili = 0;
+            let visibili = 0; // contatore dei report mostrati
 
+            // Cicla tutte le card dei report
             cards.forEach(card => {
-                const cardPeriodo = card.dataset.period;
+                const cardPeriodo = card.dataset.period; // periodo della card (early, mid, recent)
                 const searchable = normalizza(
                     card.dataset.name + ' ' +
                     card.dataset.year + ' ' +
@@ -577,19 +658,28 @@
                     card.textContent
                 );
 
+                // Verifica se la card rientra nel periodo selezionato
                 const matchPeriodo = (periodo === 'all' || periodo === cardPeriodo);
+                // Verifica se il testo della card contiene la query
                 const matchTesto = !query || searchable.includes(query);
 
+                // Mostra la card solo se soddisfa entrambi i filtri
                 const mostra = matchPeriodo && matchTesto;
 
                 card.style.display = mostra ? '' : 'none';
                 if (mostra) visibili++;
             });
 
+            // Aggiorna il testo del contatore in base ai report visibili
             counter.textContent = visibili + (visibili === 1 ? ' report trovato' : ' report disponibili');
+
+            // Se non ci sono risultati, mostra il messaggio dedicato
             noResults.style.display = visibili === 0 ? 'block' : 'none';
         }
 
+        // Aggancia la funzione di filtro agli eventi:
+        // - input sulla ricerca (ogni volta che si digita)
+        // - change sulla select del periodo
         searchInput.addEventListener('input', applicaFiltri);
         periodSelect.addEventListener('change', applicaFiltri);
     })();
